@@ -1,0 +1,20 @@
+{% extends 'rss/_base.html' %}
+{% block content %}
+<div class="row">
+    <table>
+        <tbody>
+            {% for a in articles %}
+            <tr>
+                <td>
+                    <a href="{{ a.link }}" target="_blank">{{ a.title }}</a>
+                </td>
+                <td>
+                    {{a.description}}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}
